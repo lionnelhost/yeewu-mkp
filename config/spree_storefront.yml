@@ -1,6 +1,6 @@
 default:
   navigation:
-    - title: Djiggen
+    - title: Femmes
       subtitle: Categories
       url: /t/women
       items:
@@ -25,11 +25,11 @@ default:
           title: Get up to 30% off
           url: /t/special-offers/30-percent-off
           image: 'meganav/promo_banner_right-first-category.jpg'
-    - title: Men
+    - title: Hommes
       subtitle: Categories
       url: /t/men
       items:
-        - :title: Shirts
+        - :title: Polos
           :url: /t/men/shirts
         - :title: T-shirts
           :url: /t/men/t-shirts
@@ -39,14 +39,14 @@ default:
           :url: /t/men/jackets-and-coats
       promo_banners:
         - subtitle: New collection
-          title: Summer 2021
+          title: Ete 2021
           url: /t/new-collection/summer-2021
           image: 'meganav/promo_banner_left-second-category.jpg'
-        - subtitle: Special Offers
+        - subtitle: Offres speciales
           title: Get up to 30% off
           url: /t/special-offers/30-percent-off
           image: 'meganav/promo_banner_right-second-category.jpg'
-    - title: Sportswear
+    - title: Sport
       subtitle: Categories
       url: /t/sportswear
       items:
@@ -57,11 +57,11 @@ default:
         - :title: Pants
           :url: /t/sportswear/pants
       promo_banners:
-        - subtitle: New collection
-          title: Summer 2021
+        - subtitle: Nouvelle collection
+          title: Ete 2021
           url: /t/new-collection/summer-2021
           image: 'meganav/promo_banner_left-third-category.jpg'
-        - subtitle: Special Offers
+        - subtitle: Offres speciales
           title: Get up to 30% off
           url: /t/special-offers/30-percent-off
           image: 'meganav/promo_banner_right-third-category.jpg'
