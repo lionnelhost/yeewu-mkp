@@ -1,12 +1,12 @@
 default:
   navigation:
-    - title: Women
+    - title: Djiggen
       subtitle: Categories
       url: /t/women
       items:
-        - :title: Skirts
+        - :title: T-shirts
           :url: /t/women/skirts
-        - :title: Dresses
+        - :title: Robes
           :url: /t/women/dresses
         - :title: Shirts and Blouses
           :url: /t/women/shirts-and-blouses
