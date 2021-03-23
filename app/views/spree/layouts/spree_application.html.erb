@@ -8,9 +8,7 @@
     <%= render partial: 'spree/shared/head' %>
   </head>
   <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
-    <% unless controller_name == "user_sessions" ||  controller_name == "user_registrations" %>
       <%= render partial: 'spree/shared/header' %>
-    <% end %>
     <div id="overlay" class="overlay hide-on-esc"></div>
 
     <div data-hook>
@@ -24,9 +22,7 @@
 
     <%= render 'spree/shared/translations' %>
 
-    <% unless controller_name == "user_sessions" ||  controller_name == "user_registrations" %>
       <%= render partial: 'spree/shared/footer' %>
-    <% end %>
 
     
   </body>

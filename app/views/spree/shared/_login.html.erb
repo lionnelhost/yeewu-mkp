@@ -1,5 +1,5 @@
 <div class="col-lg-11 mx-auto">
-  <h3 class="spree-mb-large spree-mt-large spree-header"><%= Spree.t(:log_in_to_continue) %></h3>
+  <h3 class="spree-mb-large spree-mt-large spree-header">Connectez vous</h3>
   <%= form_for Spree.user_class.new, as: :spree_user, url: spree_login_path do |f| %>
     <div id="password-credentials" class="mb-4">
       <div class="form-group mb-4">
@@ -25,7 +25,15 @@
       </div>
     <% end %>
 
-    <%= f.submit Spree.t(:login), class: 'btn btn-primary btn-block spree-btn mt-2' %>
+    <div class="row">
+    <div class="col-md-6">
+         <%= f.submit "Annuler", class: 'btn btn-primary btn-block spree-btn mt-2' %>
+    </div>
+    <div class="col-md-6">
+        <%= f.submit "Connexion", class: 'btn btn-primary btn-block spree-btn mt-2' %>
+    </div>
+    </div>
+
   <% end %>
 
   <% if spree.respond_to?(:recover_password_path) %>
