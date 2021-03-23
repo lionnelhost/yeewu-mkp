@@ -15,4 +15,12 @@ Spree.config do |config|
   # config.track_inventory_levels = false
 end
 
+Spree.config do |config|
+  config.logo = 'logo.png'
+end
+
+Spree.config do |config|
+  config.admin_interface_logo = 'logo.png'
+end
+
 Spree.user_class = 'Spree::User'
