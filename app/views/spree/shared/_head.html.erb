@@ -5,9 +5,20 @@
 <%== meta_robots %>
 <%= canonical_tag(current_store.url) %>
 <%= favicon_link_tag 'favicon.ico' %>
-<%= stylesheet_link_tag 'spree/frontend/all', media: 'screen', 'data-turbolinks-track': 'reload' %>
+
+<% unless controller_name == "user_sessions" ||  controller_name == "user_registrations" %>
+    <%= stylesheet_link_tag 'spree/frontend/all', media: 'screen', 'data-turbolinks-track': 'reload' %>
+<% end %>
+
+<% if controller_name == "user_sessions" ||  controller_name == "user_registrations" %>
+    <%= stylesheet_link_tag 'spree/frontend/auth', media: 'screen', 'data-turbolinks-track': 'reload' %>
+<% end %>
+
+
 <%= csrf_meta_tags %>
 <%= render 'spree/shared/paths' %>
 <%= render 'spree/shared/locale_and_currency' %>
 <%= javascript_include_tag 'spree/frontend/all', defer: true, 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'spree/frontend/all', defer: true, 'data-turbolinks-track': 'reload' %>
+
 <%= yield :head %>
