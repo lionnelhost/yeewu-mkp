@@ -105,3 +105,4 @@ gem 'sendgrid-actionmailer'
 gem 'remote_syslog_logger'
 
 gem 'activerecord-nulldb-adapter'
+gem 'font-awesome-sass', '~> 4.4.0'

@@ -40,6 +40,16 @@
   <% if spree.respond_to?(:recover_password_path) %>
     <div class="text-center forgot-password mb-4">
       <%= link_to "Mot de passe oublié", spree.recover_password_path %>
+
+        
+        <div class="rounded-social-buttons mt-4 mb-4 ">
+          <a class="circle-button google-plus" href="#"></a>
+          <a class="circle-button facebook" href="#"></a>
+          <a class="circle-button twitter" href="#"></a>
+          <a class="circle-button linkedin" href="#"></a>
+        </div>
+
+
       <%= link_to "S'inscrire", spree_signup_path, class: 'btn btn-primary text-dark inscription btn-block spree-btn mt-2' if defined?(spree_signup_path) %>
 
 

@@ -8,6 +8,7 @@
  *= require_self
  *= require_tree .
 */
+
 @import "./header.scss";
 @import "./productSlider.scss";
 @import "./homepage/sectionCategory.scss";
@@ -38,6 +39,21 @@
     width: auto;
     background-color: white !important;
   }
+
+  .nwlterBTn{
+    color: #225828 !important;
+    width: auto !important;
+    opacity: 0.2;
+    background-color: #ffffff !important;    
+    padding-bottom: Opx !important;
+    height: auto !important;
+    border-color: #FFFFFF !important;
+    border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    -ms-border-radius: 0px !important;
+    -o-border-radius: 0px !important;
+}
   
   .inscription{
     color: white !important;
@@ -386,3 +402,188 @@
   }
   
       
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  $white: #fefefe;
+
+$social-button-transition: 0.5s ease all;
+// Source: https://designpieces.com/2012/12/social-media-colours-hex-and-rgb/
+$social-brand-facebook: #3b5998;
+$social-brand-twitter: #55acee;
+$social-brand-linkedin: #007bb5;
+$social-brand-youtube: #bb0000;
+$social-brand-instagram: #125688;
+$social-brand-pinterest: #cb2027;
+$social-brand-google-plus: #dd4b39;
+$social-brand-github: #000000;
+$social-brand-tumblr: #32506d;
+
+@mixin social-button($brand-color, $brand-icon) {
+  background: $brand-color;
+
+  &:before {
+    font-family: "FontAwesome";
+    content: $brand-icon;
+  }
+  &:hover,
+  &:focus {
+    color: $brand-color;
+    background: $white;
+    border-color: $brand-color;
+  }
+}
+
+.rounded-social-buttons {
+  text-align: center;
+
+  .circle-button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 3.125rem;
+    height: 3.125rem;
+    border: .125rem solid transparent;
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+    color: $white;
+    font-size: 1.5625rem;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 1.6875rem;
+    transition: $social-button-transition;
+    margin-right: .25rem;
+    
+    &:hover,
+    &:focus {
+      transform: rotate(360deg);
+    }
+
+    &.facebook {
+      @include social-button($social-brand-facebook, "\f09a")
+    }
+    &.twitter {
+      @include social-button($social-brand-twitter, "\f099")
+    }
+    &.linkedin {
+      @include social-button($social-brand-linkedin, "\f0e1")
+    }
+    &.youtube {
+      @include social-button($social-brand-youtube, "\f167")
+    }
+    &.instagram {
+      @include social-button($social-brand-instagram, "\f16d")
+    }
+    &.pinterest {
+      @include social-button($social-brand-pinterest, "\f231")
+    }
+    &.google-plus {
+      @include social-button($social-brand-google-plus, "\f0d5")
+    }
+    &.github {
+      @include social-button($social-brand-github, "\f09b")
+    }
+    &.tumblr {
+      @include social-button($social-brand-tumblr, "\f173")
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.newsfooter {
+  width: 100%;
+  //display: block;
+  padding-top: 14px;
+  background: #225828;
+  text-align: center;
+ 
+}
+
+.newsfooter p {
+  display: inline-block;
+  font-size: 16px;
+  color: #eee;
+  margin-bottom: 0px;
+}
+
+
+.newsfooter form {
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 8px;
+  position: relative;
+  bottom: 5px;
+}
+
+.newsfooter form input {
+  display: inline-block;
+}
+
+// .newsfooter form input[type="text"] {
+//   background: rgba(0, 0, 0, 0) !important;
+//   box-shadow: none;
+//   color: white;
+//   border-radius: 0px;
+//   max-width: 480px;
+//   height: 30px;
+//   padding: 6px 0px !important;
+//   margin-bottom: 0px;
+//   background-color: transparent !important;
+// }
+
+.newsfooter form input[type="submit"] {
+  background: transparent !important;
+  border-radius: 0px !important;
+  position: relative;
+  font-size: 12px;
+  height: 20px !important;
+  margin-left: 8px;
+  border: 1px solid #FFFFFF;
+  color: white !important;
+  margin-bottom: 0px !important;
+  text-transform: uppercase;
+  top: 4px;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  -ms-border-radius: 0px !important;
+  -o-border-radius: 0px !important;
+}
