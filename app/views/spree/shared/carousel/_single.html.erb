@@ -5,7 +5,9 @@
   data-variant-change-trigger-identifier="<%= trigger_id %>"
   data-interval="false"
   data-hook>
-  <% if images.length > 1 %>
+  <%
+=begin%>
+ <% if images.length > 1 %>
     <a
       class="d-none d-md-flex h-100 justify-content-center align-items-center product-carousel-control position-absolute product-carousel-control--previous"
       href="#<%= id %>"
@@ -33,11 +35,13 @@
       </span>
       <span class="sr-only"><%= Spree.t(:next) %></span>
     </a>
-  <% end %>
+  <% end %> 
+<%
+=end%>
 
-  <div class="carousel-inner">
-    <div class="d-flex flex-row position-absolute product-carousel-overlay">
-      <div class="d-none d-lg-block <%= 'product-carousel-overlay-modal-opener' unless zoomed %>" <%= 'data-toggle=modal data-target=#picturesModal' unless zoomed %>></div>
+  <div class="carousel-inner ">
+    <div class="d-flex flex-row position-absolute activex product-carousel-overlay">
+      <div class="d-none  d-lg-block <%= 'product-carousel-overlay-modal-opener' unless zoomed %>" <%= 'data-toggle=modal data-target=#picturesModal' unless zoomed %>></div>
     </div>
 
     <% images.each_with_index do |image, imageIndex| %>
@@ -45,11 +49,11 @@
         class="carousel-item product-carousel-item<%= ' active' if imageIndex == 0 %>"
         data-variant-is-master="<%= image.viewable_id == @product.master_id %>"
         data-variant-id="<%= image.viewable_id %>">
-        <div class="product-carousel-item-squared <%= 'product-carousel-item-squared-only' if images.length == 1 %>">
+        <div class="product-carousel-item-squared  <%= 'product-carousel-item-squared-only' if images.length == 1 %>">
           <% image_attrs = {
             src: main_app.url_for(image.url(zoomed ? :zoomed : :large)),
             alt: image.alt || @product.name,
-            class: "d-block w-100",
+            class: "d-block w-100  active-image-product",
             width: zoomed ? 650 : 475,
             height: zoomed ? 870 : 594
           } %>
