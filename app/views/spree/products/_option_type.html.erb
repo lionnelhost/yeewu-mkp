@@ -1,6 +1,6 @@
-<div class="product-variants-variant" data-option-type-id="<%= option_type[:id] %>">
+<div class="product-variants-variant col-md-6"" data-option-type-id="<%= option_type[:id] %>">
   <span class="d-block mb-2 text-center text-md-left text-uppercase product-variants-variant-title">
-    <%= option_type[:presentation] %>
+    <%= option_type[:presentation] %> :
   </span>
 
   <div class="d-flex flex-wrap justify-content-center justify-content-md-start">
@@ -18,7 +18,7 @@
             } %>
 
           <%= label_tag "variant_option_value_id_#{option_type[:id]}_#{option_value[:id]}",
-            class: "m-1 select-label",
+            class: "select-label",
             "aria-label" => option_value[:presentation] do %>
 
             <span><%= option_value[:presentation] %></span>

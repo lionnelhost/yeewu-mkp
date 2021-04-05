@@ -17,8 +17,8 @@ $global-border-style: #e2e2e2;
 $second-global-border: #e2e2e2;
 $spree-header-max-width: 1440px;
 $spree-header-mobile-height: 50px;
-$spree-header-tablet-height: 75px;
-$spree-header-desktop-height: 75px;
+$spree-header-tablet-height: auto;
+$spree-header-desktop-height: auto;
 
 // bootstrap overrides
 $grid-gutter-width: 19px;
