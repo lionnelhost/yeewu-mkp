@@ -3,5 +3,8 @@ common: &defaults
   key: <%= ENV['SCOUT_KEY'] %>
   monitor: true
 
+development: 
+  <<: *defaults
+
 production:
   <<: *defaults
