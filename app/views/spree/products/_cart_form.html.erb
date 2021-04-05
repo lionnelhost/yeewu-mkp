@@ -50,33 +50,70 @@
       <% end %>
     </div>
 
-    <% if @product.variants_and_option_values(current_currency).any? %>
-      <hr>
-      <ul id="product-variants" class="product-variants">
-        <% used_variants_options(@variants, @product).each_with_index do |option_type, index| %>
-          <li>
-            <% if color_option_type_name.present? && color_option_type_name == option_type[:name] %>
-              <%= render "color_option_type", option_type: option_type, index: index %>
-            <% else %>
-              <%= render "option_type", option_type: option_type, index: index %>
+     <div class="row mt-2 col-md-12">
+          <div class="col-md-8">
+            <%= render partial: 'description' %>
+            <div class="row col-md-12 mt-2">
+
+            <% if @product.variants_and_option_values(current_currency).any? %>
+                <% used_variants_options(@variants, @product).each_with_index do |option_type, index| %>
+                    <% if color_option_type_name.present? && color_option_type_name == option_type[:name] %>
+                    <%= render "color_option_type", option_type: option_type, index: index %>
+                      
+                    <% else %>
+                  <%= render "option_type", option_type: option_type, index: index %>
+                    
+                    <% end %>
+                <% end %>
             <% end %>
-          </li>
-        <% end %>
-      </ul>
-    <% end %>
-
-    <% if is_product_available_in_currency && @product.can_supply? %>
-      <%= hidden_field_tag "variant_id", default_variant.id %>
-
-      <hr>
-      <div>
-        <div class="mb-5 mt-4 text-center text-md-left">
+            </div>
+            <div class="mb-1 mt-2 text-center text-md-left">
           <%= render 'spree/shared/quantity_select', input_name: :quantity %>
         </div>
 
-        <%= button_tag class: 'btn btn-primary w-100 text-uppercase font-weight-bold add-to-cart-button', id: 'add-to-cart-button', type: :submit, disabled: true do %>
-          <%= Spree.t(:add_to_cart) %>
-        <% end %>
+          </div>
+          <div class="col-md-4">
+          <%= render partial: 'properties' %>
+         
+          </div>
+      </div>
+
+    
+    <% if is_product_available_in_currency && @product.can_supply? %>
+      <%= hidden_field_tag "variant_id", default_variant.id %>
+
+
+      <div>
+        
+        <div class="mt-3">
+        <a class=" btn btn-primary  whish-btn  text-uppercase font-weight-bold" href=""><i class="fa fa-heart" style="font-weight:bold; color:red"></i></a>
+
+                <%= button_tag class: 'btn btn-primary addcart-btn text-uppercase font-weight-bold add-to-cart-button', id: 'add-to-cart-button', type: :submit, disabled: true do %>
+                  <%= Spree.t(:add_to_cart) %>
+                <% end %>
+                <a class=" btn btn-primary  wsp-btn text-uppercase font-weight-bold" href="">
+                <div class="row">
+                 <div class="mr-1 ml-1 "><i class="fa fa-whatsapp fa-10" style="font-weight:bold"></i> </div> 
+                <div class="mr-1">Commander avec  Whatsapp</div>
+                </div>
+               
+                </a>
+
+        </div>
+       
+        <div class="mb-1 mt-3 text-center text-md-left">
+        <%= image_tag "payment.png"  , class: "mb-0 w-100" %>
+          <div class="d-none d-sm-none d-md-block">
+            <div class="d-flex justify-content-between pl-2 pr-2  " style="color:#AAAAAA">
+                      <div><span style="font-size:15px; font-weight:530;"><i class="fa fa-truck mr-2"></i>Livraison rapide</span></div>
+                      <div><span style="font-size:15px; font-weight:530;"><i class="fa fa-shield  mr-2"></i>Paiement Sécurisé</span></div>
+                      <div><span style="font-size:15px; font-weight:530;"><i class="fas fa-message mr-2" ></i>Livraison 24/7</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+       
       </div>
     <% end %>
   </div>

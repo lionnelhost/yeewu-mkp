@@ -21,10 +21,6 @@ Spree.config do |config|
 end
 
 
-# Spree.config do |config|
-#   config.logo2 = 'logo2.png'
-# end
-
 
 Spree.config do |config|
   config.admin_interface_logo = 'logo2.png'

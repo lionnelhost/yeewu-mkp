@@ -28,6 +28,13 @@
       </div>
     </li>
   <% end %>
+   <%
+=begin%>
+ <li id="link-to-cart">
+    <%= render 'spree/shared/cart', class: 'd-inline-block account-icon', size: 36 %>
+  </li> 
+<%
+=end%>
   <li id="link-to-cart">
     <%= render 'spree/shared/cart', class: 'd-inline-block cart-icon', size: 36, item_count: 0 %>
   </li>
