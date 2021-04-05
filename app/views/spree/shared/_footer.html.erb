@@ -17,7 +17,7 @@
       <div class="row d-none d-xl-flex text-uppercase footer-spree-menu-links mt-3 mb-3">
         <% if spree.respond_to?(:account_path) %>
           <div class="col-3 ">
-                 <img src="https://illugraph-ic.com/wp-content/uploads/2021/03/logo2.png" width="250px" class="img-fluid " alt="">
+            <%= image_tag "logo.png", width: "250px", class: "img-fluid" %>
           </div>
         <% end %>
         <% if spree_navigation_data.any? %>
