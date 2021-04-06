@@ -59,6 +59,20 @@
       <% end %>
     </div>
             <%= render partial: 'description' %>
+            <div class="row col-md-12 mt-2">
+
+            <% if @product.variants_and_option_values(current_currency).any? %>
+                <% used_variants_options(@variants, @product).each_with_index do |option_type, index| %>
+                    <% if color_option_type_name.present? && color_option_type_name == option_type[:name] %>
+                    <%= render "color_option_type", option_type: option_type, index: index %>
+                      
+                    <% else %>
+                  <%= render "option_type", option_type: option_type, index: index %>
+                    
+                    <% end %>
+                <% end %>
+            <% end %>
+            </div>
             
             <div class="mb-1 mt-2 text-center text-md-left">
          
@@ -104,20 +118,7 @@
           <div class="col-md-4 product-details-side">
           <%= render partial: 'properties' %>
 
-          <div class="row col-md-12 mt-2">
-
-            <% if @product.variants_and_option_values(current_currency).any? %>
-                <% used_variants_options(@variants, @product).each_with_index do |option_type, index| %>
-                    <% if color_option_type_name.present? && color_option_type_name == option_type[:name] %>
-                    <%= render "color_option_type", option_type: option_type, index: index %>
-                      
-                    <% else %>
-                  <%= render "option_type", option_type: option_type, index: index %>
-                    
-                    <% end %>
-                <% end %>
-            <% end %>
-            </div>
+          
          
           </div>
       </div>

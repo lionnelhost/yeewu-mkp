@@ -22,10 +22,14 @@
       <li class="breadcrumb-item">
        <%= @product.name %>
       </li>
-    <% else %>
+    <%
+=begin%>
+ <% else %>
       <li class="breadcrumb-item">
         <%= current_page_name %> 
-      </li>
+      </li> 
+<%
+=end%>
     <% end %>
   </ol>
 </div>
