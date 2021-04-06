@@ -1,6 +1,6 @@
 default:
   navigation:
-    - title: Acceuil
+    - title: Accueil
       subtitle: Categories
       url: /
       items:
