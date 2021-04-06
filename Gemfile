@@ -14,7 +14,7 @@ gem 'uglifier'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails'
 
-gem 'mini_racer'
+# gem 'mini_racer'
 
 gem 'bootsnap', require: false
 
