@@ -296,8 +296,6 @@ GEM
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     marcel (1.0.0)
-    material_icons (2.2.1)
-      railties (>= 3.2)
     memory_profiler (1.0.0)
     method_source (1.0.0)
     mini_magick (4.11.0)
@@ -700,7 +698,6 @@ DEPENDENCIES
   js-routes
   letter_opener
   listen
-  material_icons
   memory_profiler
   pg
   puma
