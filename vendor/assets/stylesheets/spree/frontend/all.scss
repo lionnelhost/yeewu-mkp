@@ -592,12 +592,24 @@ $social-brand-tumblr: #32506d;
 }
 
 .main-nav-bar-category-dropdown{
-  margin-top: 40px !important;
+  margin-top: 13px !important;
 }
 
 
+.dropdownContent{
+  background-color:transparent !important;
+  border-top: none !important;
+}
 
-
+.dropdownInner{
+  background-color: white !important;
+  padding: 3em !important;
+  border-radius: 12px !important;
+  -webkit-border-radius: 12px !important;
+  -moz-border-radius: 12px !important;
+  -ms-border-radius: 12px !important;
+  -o-border-radius: 12px !important;
+}
 .main-nav-bar-category:hover .main-nav-bar-category-button, .main-nav-bar-category.show .main-nav-bar-category-button{
   color:#e6a801 !important;
 }
