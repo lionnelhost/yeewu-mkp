@@ -1,20 +1,21 @@
 <%# leaving #spree-header div for legacy support  %>
+<div class="position-absolute">
 <% cache spree_nav_cache_key('header') do %>
   <div id="spree-header" data-turbolinks-permanent >
  
-    <header id="header" class="d-flex align-items-center header-spree border-bottom">
+    <header id="header" class="d-flex align-items-center header-spree border-bottom ">
      
       <div class="container-fluid  " style=" padding-right: 0px !important; padding-left: 0px !important;"> 
       
-      <div class="d-none d-sm-none d-md-block">
-         <div class="d-flex justify-content-betweencol-md-12" style="padding-top:5px; padding-bottom:5px; padding-left:50px; padding-right:50px; width: 100%; background-color: #e6a801;">
-            <div class="d-flex justify-content-between mb-0 pb-0 col-md-5">
+      <div class="d-none d-sm-none d-lg-none d-xs-none d-md-block">
+         <div class="d-flex justify-content-between col-md-12" style="padding-top:5px; padding-bottom:5px; padding-left:50px; padding-right:50px; width: 100%; background-color: #e6a801;">
+            <div class="d-flex justify-content-between mb-0 pb-0 col-md-6 col-sm-6">
                   <div><span style="font-size:13px; font-weight:530;"><i class="fa fa-phone mr-2" style="color: #225828"></i>(+221) 33 000 00 00</span></div>
                   <div><span style="font-size:13px; font-weight:530;"><i class="fa fa-map-marker mr-2" style="color: #225828"></i>Mermoz-Sacré-Cœur, Dakar</span></div>
                   <div><span style="font-size:13px; font-weight:530;"><i class="fa fa-history mr-2" style="color: #225828"></i>Livraison 24/7</span></div>
 
             </div>
-            <div class="mb-0 pb-0 col-md-3">
+            <div class="mb-0 pb-0 ">
                 
             </div>
             <div class="d-flex flex-row-reverse mb-0 pb-0">
@@ -47,3 +48,5 @@
     </header>
   </div>
 <% end %>
+
+</div>

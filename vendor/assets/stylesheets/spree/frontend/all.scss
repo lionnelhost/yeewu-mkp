@@ -590,3 +590,18 @@ $social-brand-tumblr: #32506d;
   -ms-border-radius: 0px !important;
   -o-border-radius: 0px !important;
 }
+
+.main-nav-bar-category-dropdown{
+  margin-top: 40px !important;
+}
+
+
+
+
+.main-nav-bar-category:hover .main-nav-bar-category-button, .main-nav-bar-category.show .main-nav-bar-category-button{
+  color:#e6a801 !important;
+}
+
+.main-nav-bar-category:hover .main-nav-bar-category-button:after, .main-nav-bar-category.show .main-nav-bar-category-button:after {
+  border-bottom-color: transparent !important; 
+}

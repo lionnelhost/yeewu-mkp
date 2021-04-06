@@ -16,14 +16,15 @@
         </div>
       </div>
     <% elsif not @taxon %>
-      <div id="no-taxon-banner">
-        <div class="container">
+      <div id="no-taxon-banner ml-0 pl-0" >
+        <div class="container ml-0 pl-0" >
           <%= lazy_image(
             src: asset_path('homepage/products.jpg'),
             alt: 'products-banner',
             width: 1110,
-            height: 300,
-            class: 'w-100 d-none d-md-block'
+            height: 200,
+            class: 'vw-100 vh-10 d-none d-md-block',
+            style: 'height:100px !important'
           ) %>
         </div>
       </div>

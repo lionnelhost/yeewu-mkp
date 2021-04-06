@@ -15,105 +15,105 @@
 
  // Example starter JavaScript for disabling form submissions if there are invalid fields
  
-$(document).ready(function() {
-    if (window.location.pathname == '/') {
-        (function () {
-            const second = 1000,
-                  minute = second * 60,
-                  hour = minute * 60,
-                  day = hour * 24;
+// $(document).ready(function() {
+//     if (window.location.pathname == '/') {
+//         (function () {
+//             const second = 1000,
+//                   minute = second * 60,
+//                   hour = minute * 60,
+//                   day = hour * 24;
           
-            let birthday = "april 30, 2021 00:00:00",
-                countDown = new Date(birthday).getTime(),
-                x = setInterval(function() {    
+//             let birthday = "april 30, 2021 00:00:00",
+//                 countDown = new Date(birthday).getTime(),
+//                 x = setInterval(function() {    
           
-                  let now = new Date().getTime(),
-                      distance = countDown - now;
+//                   let now = new Date().getTime(),
+//                       distance = countDown - now;
           
-                  document.getElementById("days").innerText = Math.floor(distance / (day)),
-                    document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-                    document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-                    document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+//                   document.getElementById("days").innerText = Math.floor(distance / (day)),
+//                     document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+//                     document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+//                     document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
           
-                  //do something later when date is reached
-                  if (distance < 0) {
-                    let headline = document.getElementById("headline"),
-                        countdown = document.getElementById("countdown"),
-                        content = document.getElementById("content");
+//                   //do something later when date is reached
+//                   if (distance < 0) {
+//                     let headline = document.getElementById("headline"),
+//                         countdown = document.getElementById("countdown"),
+//                         content = document.getElementById("content");
           
-                    headline.innerText = "It's my birthday!";
-                    countdown.style.display = "none";
-                    content.style.display = "block";
+//                     headline.innerText = "It's my birthday!";
+//                     countdown.style.display = "none";
+//                     content.style.display = "block";
           
-                    clearInterval(x);
-                  }
-                  //seconds
-                }, 0)
-            }());
-}
-});
+//                     clearInterval(x);
+//                   }
+//                   //seconds
+//                 }, 0)
+//             }());
+// }
+// });
 
 
 
 
-    "use strict";
+//     "use strict";
 
-    productScroll();
+//     productScroll();
     
-    function productScroll() {
-      let slider = document.getElementById("slider");
-      let next = document.getElementsByClassName("pro-next");
-      let prev = document.getElementsByClassName("pro-prev");
-      let slide = document.getElementById("slide");
-      let item = document.getElementById("slide");
+//     function productScroll() {
+//       let slider = document.getElementById("slider");
+//       let next = document.getElementsByClassName("pro-next");
+//       let prev = document.getElementsByClassName("pro-prev");
+//       let slide = document.getElementById("slide");
+//       let item = document.getElementById("slide");
     
-      for (let i = 0; i < next.length; i++) {
-        //refer elements by class name
+//       for (let i = 0; i < next.length; i++) {
+//         //refer elements by class name
     
-        let position = 0; //slider postion
+//         let position = 0; //slider postion
     
-        prev[i].addEventListener("click", function() {
-          //click previos button
-          if (position > 0) {
-            //avoid slide left beyond the first item
-            position -= 1;
-            translateX(position); //translate items
-          }
-        });
+//         prev[i].addEventListener("click", function() {
+//           //click previos button
+//           if (position > 0) {
+//             //avoid slide left beyond the first item
+//             position -= 1;
+//             translateX(position); //translate items
+//           }
+//         });
     
-        next[i].addEventListener("click", function() {
-          if (position >= 0 && position < hiddenItems()) {
-            //avoid slide right beyond the last item
-            position += 1;
-            translateX(position); //translate items
-          }
-        });
-      }
+//         next[i].addEventListener("click", function() {
+//           if (position >= 0 && position < hiddenItems()) {
+//             //avoid slide right beyond the last item
+//             position += 1;
+//             translateX(position); //translate items
+//           }
+//         });
+//       }
     
-      function hiddenItems() {
-        //get hidden items
-        let items = getCount(item, false);
-        let visibleItems = slider.offsetWidth / 210;
-        return items - Math.ceil(visibleItems);
-      }
-    }
+//       function hiddenItems() {
+//         //get hidden items
+//         let items = getCount(item, false);
+//         let visibleItems = slider.offsetWidth / 210;
+//         return items - Math.ceil(visibleItems);
+//       }
+//     }
     
-    function translateX(position) {
-      //translate items
-      slide.style.left = position * -210 + "px";
-    }
+//     function translateX(position) {
+//       //translate items
+//       slide.style.left = position * -210 + "px";
+//     }
     
-    function getCount(parent, getChildrensChildren) {
-      //count no of items
-      let relevantChildren = 0;
-      let children = parent.childNodes.length;
-      for (let i = 0; i < children; i++) {
-        if (parent.childNodes[i].nodeType != 3) {
-          if (getChildrensChildren)
-            relevantChildren += getCount(parent.childNodes[i], true);
-          relevantChildren++;
-        }
-      }
-      return relevantChildren;
-    }
+//     function getCount(parent, getChildrensChildren) {
+//       //count no of items
+//       let relevantChildren = 0;
+//       let children = parent.childNodes.length;
+//       for (let i = 0; i < children; i++) {
+//         if (parent.childNodes[i].nodeType != 3) {
+//           if (getChildrensChildren)
+//             relevantChildren += getCount(parent.childNodes[i], true);
+//           relevantChildren++;
+//         }
+//       }
+//       return relevantChildren;
+//     }
     
