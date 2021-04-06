@@ -1,61 +1,84 @@
 default:
   navigation:
-    - title: Femmes
+    - title: Acceuil
       subtitle: Categories
-      url: /t/women
+      url: /
       items:
-        - :title: T-shirts
-          :url: /t/women/skirts
-        - :title: Robes
-          :url: /t/women/dresses
-        - :title: Shirts and Blouses
-          :url: /t/women/shirts-and-blouses
-        - :title: Sweaters
-          :url: /t/women/sweaters
-        - :title: Tops and T-shirts
-          :url: /t/women/tops-and-t-shirts
-        - :title: Jackets and Coats
-          :url: /t/women/jackets-and-coats
+        - :title: Agriculture
+          :url: /t/agriculture
+        - :title: Elevage
+          :url: /t/elevage
+        - :title: Electronique
+          :url: /t/informatiques
+        - :title: Vêtements
+          :url: /t/clothes
+    - title: Agriculture
+      subtitle: Categories
+      url: /t/agriculture
+      items:
+        - :title: Arachides
+          :url: /t/agriculture/arachides
+        - :title: Maïs
+          :url: /t/agriculture/mais
+        - :title: Piments
+          :url: /t/agriculture/piments
       promo_banners:
-        - subtitle: New collection
-          title: Summer 2021
-          url: /t/new-collection/summer-2021
+        - subtitle: Special Ramadan
+          title: Ramadan 2021
+          url: /t/special-ramadan/ramadan-2021
           image: 'meganav/promo_banner_left-first-category.jpg'
-        - subtitle: Special Offers
-          title: Get up to 30% off
+        - subtitle: Offre Speciale
+          title: Obtenez 30% de reduction
           url: /t/special-offers/30-percent-off
           image: 'meganav/promo_banner_right-first-category.jpg'
-    - title: Hommes
+    - title: Elevage
       subtitle: Categories
-      url: /t/men
+      url: /t/elevage
       items:
-        - :title: Polos
-          :url: /t/men/shirts
-        - :title: T-shirts
-          :url: /t/men/t-shirts
-        - :title: Sweaters
-          :url: /t/men/sweaters
-        - :title: Jackets and Coats
-          :url: /t/men/jackets-and-coats
+        - :title: Poulets
+          :url: /t/elevage/poulets
+        - :title: Moutons
+          :url: /t/elevage/moutons
+        - :title: Boeufs
+          :url: /t/elevage/boeufs
       promo_banners:
-        - subtitle: New collection
-          title: Ete 2021
-          url: /t/new-collection/summer-2021
-          image: 'meganav/promo_banner_left-second-category.jpg'
-        - subtitle: Offres speciales
-          title: Get up to 30% off
+        - subtitle: Special Ramadan
+          title: Ramadan 2021
+          url: /t/special-ramadan/ramadan-2021
+          image: 'meganav/promo_banner_left-first-category.jpg'
+        - subtitle: Offre Speciale
+          title: Obtenez 30% de reduction
           url: /t/special-offers/30-percent-off
-          image: 'meganav/promo_banner_right-second-category.jpg'
-    - title: Sport
+          image: 'meganav/promo_banner_right-first-category.jpg'
+    - title: Electronique
       subtitle: Categories
-      url: /t/sportswear
+      url: /t/informatiques
+      items:
+        - :title: Smartphones
+          :url: /t/informatiques/smartphones
+        - :title: Electromenager
+          :url: /t/informatiques/electromenager
+        - :title: Ordinateurs
+          :url: /t/informatiques/ordinateurs
+      promo_banners:
+        - subtitle: Special Ramadan
+          title: Ramadan 2021
+          url: /t/special-ramadan/ramadan-2021
+          image: 'meganav/promo_banner_left-first-category.jpg'
+        - subtitle: Offre Speciale
+          title: Obtenez 30% de reduction
+          url: /t/special-offers/30-percent-off
+          image: 'meganav/promo_banner_right-first-category.jpg'
+    - title: Vêtements
+      subtitle: Categories
+      url: /t/clothes
       items:
         - :title: Tops
-          :url: /t/sportswear/tops
+          :url: /t/clothes/tops
         - :title: Sweatshirts
-          :url: /t/sportswear/sweatshirts
-        - :title: Pants
-          :url: /t/sportswear/pants
+          :url: /t/clothes/sweatshirts
+        - :title: Bazin
+          :url: /t/clothes/bazin
       promo_banners:
         - subtitle: Nouvelle collection
           title: Ete 2021
@@ -67,33 +90,91 @@ default:
           image: 'meganav/promo_banner_right-third-category.jpg'
 fr:
   navigation:
-    - title: Femmes
-      url: /fr/t/women
+    - title: Acceuil
+      subtitle: Categories
+      url: /
+      items:
+        - :title: Agriculture
+          :url: /t/agriculture
+        - :title: Elevage
+          :url: /t/elevage
+        - :title: Electronique
+          :url: /t/informatiques
+        - :title: Vêtements
+          :url: /t/clothes
+    - title: Agriculture
+      subtitle: Categories
+      url: /t/agriculture
+      items:
+        - :title: Arachides
+          :url: /t/agriculture/arachides
+        - :title: Maïs
+          :url: /t/agriculture/mais
+        - :title: Piments
+          :url: /t/agriculture/piments
       promo_banners:
-        - subtitle: Nouvelle collection
-          title: Été 2021
-          url: /fr/t/new-collection/summer-2021
+        - subtitle: Special Ramadan
+          title: Ramadan 2021
+          url: /t/special-ramadan/ramadan-2021
           image: 'meganav/promo_banner_left-first-category.jpg'
-        - subtitle: Offres spéciales
-          url: /fr/t/special-offers/30-percent-off
+        - subtitle: Offre Speciale
+          title: Obtenez 30% de reduction
+          url: /t/special-offers/30-percent-off
           image: 'meganav/promo_banner_right-first-category.jpg'
-    - title: Hommes
-      url: /fr/t/men
+    - title: Elevage
+      subtitle: Categories
+      url: /t/elevage
+      items:
+        - :title: Poulets
+          :url: /t/elevage/poulets
+        - :title: Moutons
+          :url: /t/elevage/moutons
+        - :title: Boeufs
+          :url: /t/elevage/boeufs
+      promo_banners:
+        - subtitle: Special Ramadan
+          title: Ramadan 2021
+          url: /t/special-ramadan/ramadan-2021
+          image: 'meganav/promo_banner_left-first-category.jpg'
+        - subtitle: Offre Speciale
+          title: Obtenez 30% de reduction
+          url: /t/special-offers/30-percent-off
+          image: 'meganav/promo_banner_right-first-category.jpg'
+    - title: Electronique
+      subtitle: Categories
+      url: /t/informatiques
+      items:
+        - :title: Smartphones
+          :url: /t/informatiques/smartphones
+        - :title: Electromenager
+          :url: /t/informatiques/electromenager
+        - :title: Ordinateurs
+          :url: /t/informatiques/ordinateurs
+      promo_banners:
+        - subtitle: Special Ramadan
+          title: Ramadan 2021
+          url: /t/special-ramadan/ramadan-2021
+          image: 'meganav/promo_banner_left-first-category.jpg'
+        - subtitle: Offre Speciale
+          title: Obtenez 30% de reduction
+          url: /t/special-offers/30-percent-off
+          image: 'meganav/promo_banner_right-first-category.jpg'
+    - title: Vêtements
+      subtitle: Categories
+      url: /t/clothes
+      items:
+        - :title: Tops
+          :url: /t/clothes/tops
+        - :title: Sweatshirts
+          :url: /t/clothes/sweatshirts
+        - :title: Bazin
+          :url: /t/clothes/bazin
       promo_banners:
         - subtitle: Nouvelle collection
-          title: Été 2021
-          url: /fr/t/new-collection/summer-2021
-          image: 'meganav/promo_banner_left-second-category.jpg'
-        - subtitle: Offres spéciales
-          url: /fr/t/special-offers/30-percent-off
-          image: 'meganav/promo_banner_right-second-category.jpg'
-    - title: Vêtements de sport
-      url: /fr/t/sportswear
-      promo_banners:
-        - subtitle: Nouvelle collection
-          title: Été 2021
-          url: /fr/t/new-collection/summer-2021
+          title: Ete 2021
+          url: /t/new-collection/summer-2021
           image: 'meganav/promo_banner_left-third-category.jpg'
-        - subtitle: Offres spéciales
-          url: /fr/t/special-offers/30-percent-off
+        - subtitle: Offres speciales
+          title: Get up to 30% off
+          url: /t/special-offers/30-percent-off
           image: 'meganav/promo_banner_right-third-category.jpg'
