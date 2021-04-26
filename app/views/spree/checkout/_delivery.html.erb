@@ -16,7 +16,7 @@
           <ul class="checkout-content-shipping-methods-list">
             <% ship_form.object.shipping_rates.each do |rate| %>
               <li class="shipping-method">
-                <label class="spree-radio-label">
+                <label class="spree-radio-label" >
                   <%= ship_form.radio_button :selected_shipping_rate_id,
                     rate.id,
                     data: {
@@ -24,11 +24,11 @@
                       cost: rate.display_cost,
                       tax: rate.display_tax_amount
                     } %>
-                  <span class="spree-radio-label-custom-input"></span>
-                  <span class="rate-name"><%= rate.name %></span>
-                  <p class="rate-cost"><%= rate.display_cost %></p>
+                  <span class="spree-radio-label-custom-input " ></span>
+                  <span class="rate-name" style="padding-top: -1em !important"><%= rate.name %> <small class="rate-cost" style="font-size: 20px !important"><%= rate.display_cost %></small></span>
+                  
                 </label>
-              </li>
+              </li> </br>
             <% end %>
           </ul>
         </div>

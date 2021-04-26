@@ -17,7 +17,7 @@ Spree.config do |config|
 end
 
 Spree.config do |config|
-  config.logo = 'logo2.png'
+  config.logo = 'logo.png'
 end
 
 

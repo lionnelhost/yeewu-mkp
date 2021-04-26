@@ -20,33 +20,46 @@ content_for :head do
 end
 %>
 
+
+
+
+
+<div class="col-md-12 m-0 p-0 text-center" style="height:250px; background-image: url(<%= image_url('checkoutheader.png')%>); background-size: cover; background-position: center;" >
+      <h1 class="pt-4 text-uppercase" style="padding-top:90px !important"><%= Spree.t('checkout_page.header') %></h1>
+</div>
+
 <div id="checkout" class="container checkout" data-hook>
   <%= render partial: 'spree/shared/error_messages', locals: { target: @order } %>
 
-  <div class="row align-items-center flex-column checkout-header" data-hook="checkout_header">
-    <div class="text-uppercase checkout-header-title">
-      <h1 data-hook="checkout_title"><%= Spree.t('checkout_page.header') %></h1>
-    </div>
+  <div class="row align-items-center mt-3 flex-column checkout-header" data-hook="checkout_header">
+    
     <div class="checkout-progress" data-hook="checkout_progress" role="navigation" aria-label="<%= Spree.t('checkout_page.checkout_navigation') %>">
       <%= checkout_progress %>
     </div>
   </div>
 
   <div class="row checkout-content" data-hook="checkout_content">
-    <%= form_for @order, url: spree.update_checkout_path(@order.state), html: { id: "checkout_form_#{@order.state}", class: "w-100 d-lg-flex align-items-lg-baseline  flex-wrap position-relative" } do |form| %>
-      <div class="<%= if @order.state != 'confirm' then 'col-lg-6' else 'col-md-12' end %>" data-hook="checkout_form_wrapper">
+    <%= form_for @order, url: spree.update_checkout_path(@order.state), html: { id: "checkout_form_#{@order.state}", class: "w-100 d-lg-flex   flex-wrap position-relative" } do |form| %>
+      <div class="<%= if @order.state != 'confirm' then 'col-lg-7' else 'col-md-12' end %>" data-hook="checkout_form_wrapper">
         <%= form.hidden_field :state_lock_version %>
         <%= render @order.state, form: form %>
       </div>
 
       <% unless @order.confirm? %>
-        <div id="checkout-summary" class="col-md-12 col-lg-auto" data-hook="checkout_summary_box">
-          <div class="checkout-summary-container position-sticky">
+        <div id="checkout-summary" class="col-md-3 col-lg-5 w-100" data-hook="checkout_summary_box">
+          <div class="checkout-summary-container position-sticky" style="padding-top: 0em !important" >
             <%= render partial: 'summary', locals: { order: @order } %>
-            <div data-hook="buttons">
-              <% submit_label_key = @order.confirm? ? :place_order : :save_and_continue %>
-              <%= submit_tag Spree.t(submit_label_key), class: 'btn btn-primary text-uppercase font-weight-bold w-100 checkout-content-save-continue-button' %>
+           
+            <div class="row  d-flex justify-content-between pl-0 pr-0 w-100 col-md-12 mr-0" style="margin:0px !important">
+              <div class="col-md-6 mb-4" style="padding: 0px 5px 0px 0px !important">
+                <a href="#" class="btn btn-primary btnPrecedent btn-block spree-btn" > Précédent </a>
+              </div>
+              <div data-hook="buttons" class="col-md-6 mb-4" style="padding: 0px 0px 0px 5px !important">
+                <% submit_label_key = @order.confirm? ? :place_order : :save_and_continue %>
+                <%= submit_tag Spree.t(submit_label_key), class: 'btn btn-primary btnSuivant  float-right btn-block spree-btn text-uppercase font-weight-bold  ' %>
+              </div>
             </div>
+
           </div>
         </div>
       <% end %>

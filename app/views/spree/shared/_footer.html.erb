@@ -1,24 +1,22 @@
 <% cache spree_nav_cache_key('footer') do %>
-  <footer id="footer" class="pt-2 mx-auto footer-spree" data-turbolinks-permanent style="background-color:#ffffff  ">
-  <div class="d-md-block d-none"> 
-            <div class="newsfooter d-flex justify-content-between col-12" style="padding-left:30px; padding-right:30px">
-        <div>	<p class="mr-4">Inscrivez vous a notre newsletter:</p> </div>
-          <form method="POST" action="">
-            
 
-          <div class="d-flex  bd-highlight">
-            <div class=" bd-highlight"></div>
-              <div class="pb-1 bd-highlight"><input type="text" class="nwlterBTn" size="50" name="email" placeholder="votre mail"></div>
-            <div class=" bd-highlight"><input type="submit" value="S'abonner"></div>
-          </div>
+  <div class="d-md-block d-none mt-3" > 
+            <div class="newsfooter col-12 align-middle" style="padding-left:30px; padding-right:30px">
+            <h2 class="mt-3">S'inscrire à notre newsletter</h2>
+          <div><p class="mb-4 " style="font-weight:bold">Inscrivez vous à notre newsletter pour être le premier averti de toutes nos nouveautés</p> </div>
+          <form method="POST" action="">
+              <div class="pb-1 col-md-12"> <input type="text" class="nwlterBTn" size="60" name="email" placeholder="email@example.com"> <input class="nwlterBTnSubmit" type="submit" value="S'abonner"></div>
+              <hr class=" hrnews">
           </form>
       </div>
   
   </div>
   
+  <footer id="footer" class="pt-2 mx-auto footer-spree" data-turbolinks-permanent style="background-color:#225828  ">
+  
   <div class="container">
    
-      <div class="row d-none d-xl-flex text-uppercase footer-spree-menu-links mt-3 mb-3">
+      <div class="row d-none d-xl-flex text-uppercase  footer-spree-menu-links mt-3 mb-3">
         <% if spree.respond_to?(:account_path) %>
           <div class="col-3 ">
             <%= image_tag "logo.png", width: "250px", class: "img-fluid" %>
