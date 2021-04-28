@@ -26,6 +26,7 @@ end
 
 <div class="col-md-12 m-0 p-0 text-center" style="height:250px; background-image: url(<%= image_url('checkoutheader.png')%>); background-size: cover; background-position: center;" >
       <h1 class="pt-4 text-uppercase" style="padding-top:90px !important"><%= Spree.t('checkout_page.header') %></h1>
+      <%= @order.as_json %>
 </div>
 
 <div id="checkout" class="container checkout" data-hook>
@@ -34,7 +35,13 @@ end
   <div class="row align-items-center mt-3 flex-column checkout-header" data-hook="checkout_header">
     
     <div class="checkout-progress" data-hook="checkout_progress" role="navigation" aria-label="<%= Spree.t('checkout_page.checkout_navigation') %>">
-      <%= checkout_progress %>
+      <div class="container">
+        <ul class="progressbar">
+          <li  class=" <%= 'active' if @order.state == 'address' %> <%= 'active' if @order.state == 'payment' %> <%= 'active' if @order.state == 'delivery' %> "> <a href="/address"> <%= Spree.t('checkout_page.address') %></a>   </li>
+          <li  class=" <%= 'active' if @order.state == 'delivery' %> <%= 'active' if @order.state == 'payment' %>"><a href="/delivery"> <%= Spree.t('checkout_page.delivery') %></a></li>
+          <li class=" <%= 'active' if @order.state == 'payment' %>"> <a href="/payment"> <%= Spree.t('checkout_page.payment') %></a></li>
+        </ul>
+      </div>
     </div>
   </div>
 
