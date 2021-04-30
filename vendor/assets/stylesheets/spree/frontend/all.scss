@@ -21,6 +21,11 @@
 
 
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+body {
+  font-family: 'Nunito', sans-serif !important;
+}
 
 .connexion{
     background-color: #9bb39e !important;
@@ -705,4 +710,9 @@ $social-brand-tumblr: #32506d;
 .checkout-confirm-order-details-line-items-line-item img {
   width: 100px !important;
   border-radius: 10px;
+}
+
+
+.text-capitalize {
+  text-transform: capitalize !important;
 }
