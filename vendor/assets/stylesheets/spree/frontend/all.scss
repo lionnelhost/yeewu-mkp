@@ -714,4 +714,37 @@ $social-brand-tumblr: #32506d;
   border-radius: 10px;
 }
 
+.mt-30 {
+  margin-top: 30px !important;
+}
+
+.mt-20 {
+  margin-top: 20px !important;
+}
+
+.mt-80 {
+  margin-top: 80px !important;
+}
+
+.m-20 {
+  margin: 20px !important;
+}
+
+.login-box {
+  border: solid 1px black; 
+  border-radius: 5px;
+}
+
+.mb-10 {
+  margin-bottom: 10px !important;
+}
+
+.side-login-page {
+  background-size: cover; 
+  background-position: center;
+  background-image: image_url('signup.png');
+  // max-height: 500px !important;
+  // object-fit: c;
+}
+
 

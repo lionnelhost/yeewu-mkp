@@ -9,5 +9,7 @@
 <%= csrf_meta_tags %>
 <%= render 'spree/shared/paths' %>
 <%= render 'spree/shared/locale_and_currency' %>
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <%= javascript_include_tag 'spree/frontend/all', defer: true, 'data-turbolinks-track': 'reload' %>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <%= yield :head %>
