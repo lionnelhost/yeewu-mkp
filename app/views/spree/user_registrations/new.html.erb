@@ -8,7 +8,8 @@
     </div>
     <div class="col-md-6">
     
-      <div id="new-customer" data-hook="login" class=" col-lg-8 offset-lg-2 p-0">
+    <div id="new-customer" data-hook="login" class=" col-lg-8 offset-lg-2 p-0" style="border: solid 1px black; border-radius: 5px; ">
+      <div style="border: solid 1px black; border-radius: 5px; padding-left: 3em; padding-right: 3em">
         <h3 class="text-center mb-4" style="margin-top:80px"><%= Spree.t(:new_customer) %></h3>
         <%= form_for resource, as: :spree_user, url: spree.registration_path do |f| %>
           <div data-hook="signup_inside_form">
@@ -21,6 +22,8 @@
         <%= link_to "Connexion", spree.login_path, class: 'btn btn-primary text-dark inscription btn-block spree-btn mt-2 spree-mb-large' %>
         <div data-hook="login_extras"></div>
       </div>
+    </div>
+      
     </div>
 </div>
  
