@@ -25,7 +25,11 @@
                   classes: 'd-inline-block',
                   width: 41.4,
                   height: 36) %>
-                Connexion  
+          <% if try_spree_current_user || try_spree_current_user.email.blank? %>
+              <%= try_spree_current_user.email %>
+          <% else %> 
+            <%= Spree.t('auth.login') %> 
+          <% end %>
         </button>
         
 

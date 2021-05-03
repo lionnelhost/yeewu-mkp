@@ -1,0 +1,4 @@
+fr:
+  spree:
+    auth:
+      login: "Connexion"
