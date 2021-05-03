@@ -1,0 +1,21 @@
+.no-padding-left-right {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.top-bar {
+    width: 100%; 
+    height: 42px !important;
+  
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.16);
+    background-color: #e6a801;
+}
+
+.top-bar {
+    a {
+        color: black !important;
+    }
+    a:hover {
+        text-decoration: none !important;
+    }
+}
