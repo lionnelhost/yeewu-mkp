@@ -21,6 +21,13 @@
 @import "./components/index.scss";
 
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+$font-nunito: 'Nunito', sans-serif !important;
+
+body {
+  font-family: $font-nunito;
+}
 
 .connexion{
     background-color: #9bb39e !important;
@@ -706,6 +713,5 @@ $social-brand-tumblr: #32506d;
   width: 100px !important;
   border-radius: 10px;
 }
-
 
 
