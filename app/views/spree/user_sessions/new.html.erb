@@ -11,7 +11,7 @@
     <div id="new-customer" data-hook="login" class=" col-lg-8 offset-lg-2 p-0" style="border: solid 1px black; border-radius: 5px; ">
       <div style="border: solid 1px black; border-radius: 5px; padding-left: 3em; padding-right: 3em">
   <h3 class="spree-mb-large spree-mt-large spree-header">Connectez vous</h3>
-  <%= form_for Spree.user_class.new, as: :spree_user, url: spree_login_path do |f| %>
+    <%= form_for Spree.user_class.new, as: :spree_user, url: spree_login_path do |f| %>
     <div id="password-credentials" class="mb-4">
       <div class="form-group mb-4">
         <p class="form-group checkout-content-inner-field">

@@ -1,44 +1,77 @@
 <% cache spree_nav_cache_key('footer') do %>
-
-  <div class="d-md-block d-none mt-3" > 
-            <div class="newsfooter col-12 align-middle" style="padding-left:30px; padding-right:30px">
-            <h2 class="mt-3">S'inscrire à notre newsletter</h2>
-          <div><p class="mb-4 " style="font-weight:bold">Inscrivez vous à notre newsletter pour être le premier averti de toutes nos nouveautés</p> </div>
-          <form method="POST" action="">
-              <div class="pb-1 col-md-12"> <input type="text" class="nwlterBTn" size="60" name="email" placeholder="email@example.com"> <input class="nwlterBTnSubmit" type="submit" value="S'abonner"></div>
-              <hr class=" hrnews">
-          </form>
-      </div>
-  
-  </div>
-  
-  <footer id="footer" class="pt-2 mx-auto footer-spree" data-turbolinks-permanent style="background-color:#225828  ">
-  
-  <div class="container">
-   
-      <div class="row d-none d-xl-flex text-uppercase  footer-spree-menu-links mt-3 mb-3">
+  <footer id="footer" class="pt-2 mx-auto border-top footer-spree" data-turbolinks-permanent>
+    <div class="row d-xl-flex justify-content-xl-around pb-xl-5 ml-4 mr-4">
+      <!-- First column -->
+      <div class="d-flex flex-column col-sm-6 col-md-4 col-lg-2">
         <% if spree.respond_to?(:account_path) %>
-          <div class="col-3 ">
-            <%= image_tag "logo.png", width: "250px", class: "img-fluid" %>
+          <div>
+            <%= image_tag "logo.png", width: "250px", height: "250px", class: "img-fluid" %>
           </div>
         <% end %>
-        <% if spree_navigation_data.any? %>
-          <% spree_navigation_data.first(3).each do |root| %>
-            <div class="col-3">
-              <div class="footer-spree-label">
-                <%= link_to root[:title], root[:url] %>
-              </div>
-              <% if  root[:items].present? %>
-                <% root[:items].each do |item| %>
-                  <div class="pt-2"><%= link_to item[:title], item[:url] %></div>
-                <% end %>
-              <% end %>
+        <% if current_store.description %>
+            <div class="d-none d-xl-block pt-xl-2 footer-spree-info">
+              <%= current_store.description %>
             </div>
           <% end %>
-        <% end %>
-      
       </div>
-    </div>
+       <!-- Second column -->
+      <div class="d-flex flex-column col-sm-6 col-md-4 col-lg-2">
+        <h4 class="footer-head-title"> SERVICE CLIENT </h4>
+        <span class="footer-link"> Centre d'assistance</span>
+        <span class="footer-link"> Méthodes de paiement</span>
+        <span class="footer-link"> Méthodes de livraison</span>
+        <span class="footer-link"> Politique de retour</span>
+        <span class="footer-link"> Signaler un produit</span>
+      </div>
+       <!-- Third column -->
+      <div class="d-flex flex-column col-sm-6 col-md-4 col-lg-2">
+        <h4 class="footer-head-title"> A PROPOS </h4>
+        <span class="footer-link"> Qui sommes-nous?</span>
+        <span class="footer-link"> C.G.U</span>
+        <span class="footer-link"> Propiete intellectuelle</span>
+        <span class="footer-link"> Politique de confidentialite</span>
+        <span class="footer-link"> Yeewu Tiers</span>
+      </div>
+       <!-- Four column -->
+      <div class="d-flex flex-column col-sm-6 col-md-4 col-lg-2">
+        <h4 class="footer-head-title"> APPEL D'OFFRES / ENCHERES </h4>
+        <span class="footer-link"> Vendez sur Yeewu</span>
+        <span class="footer-link"> Deposez une annonce</span>
+        <span class="footer-link"> Conditions d'appels d'offres</span>
+        <span class="footer-link"> Vendeurs certifies</span>
+        <span class="footer-link"> Espace publicitaires</span>
+      </div>
+       <!-- Five column -->
+      <div class="d-flex flex-column col-sm-6 col-md-4 col-lg-2">
+        <h4 class="footer-head-title"> NOS CONTACTER </h4>
+        <span class="footer-link"> Service client</span>
+        <span class="footer-link"> Carrieres et emplois</span>
+        <span class="footer-link"> Devenir un partenaire logistique</span>
+        <span class="footer-link"> Devenir un vendeur certifie</span>
+        <span class="footer-link"> Investisseurs et collaborateurs</span>
+      </div>
+       <!-- Six column -->
+      <div class="d-flex flex-column col-sm-6 col-md-4 col-lg-2">
+        <div class="d-flex flex-column mb-2">
+          <span class="footer-head-title">Retrouvez-nous sur</span>
+          <div class="d-flex justify-content-around mr-2 " style="width:180px  !important; font-size: 1.8em !important">
+             <span><i class="fa fa-facebook text-white"></i></span>
+             <span><i class="fa fa-twitter  text-white"></i></span>
+             <span><i class="fa fa-instagram  text-white"></i></span>
+             <span><i class="fa fa-linkedin  text-white"></i></span>
+          </div>
+        </div>
+        <div class="d-flex flex-column mb-2">
+          <span class="footer-head-title">Mode de paiement</span>
+         <div class="d-flex justify-content-around mr-2 " style="width:180px  !important; font-size: 1.8em !important">
+             <span><i class="fa fa-credit-card text-white"></i></span>
+             <span><i class="fa fa-coins  text-white"></i></span>
+             
+          </div>
+        </div>
+      </div>
+
+    </div> 
     <%= render 'spree/shared/copyright' %>
   </footer>
 <% end %>

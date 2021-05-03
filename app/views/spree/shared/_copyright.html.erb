@@ -1,11 +1,13 @@
-<div class="border-top pl-4 pr-4 position-bottom footer-spree-copyright">
- 
-      
-  <div class="d-flex justify-content-between text-center">
-    <div class="p-2 bd-highlight"> <div> © <%= Time.current.year %>  <%= link_to current_store.name, "https://#{current_store.url}" %>.</div> </div>
-    <div class="p-2 bd-highlight d-md-none d-none"> <img src="https://illugraph-ic.com/wp-content/uploads/2021/03/Groupe-16.png"  width="400px" class="img-fluid " alt=""></div>
-    <div class="p-2 bd-highlight  d-md-none d-none"> <div style="color:black">Tous droits réservés</div></div>
+<div class="border-top pl-4 pr-4 position-bottom footer-spree-copyright"> 
+  <div class="d-flex justify-content-arround text-center">
+    <div class="p-2 bd-highlight col-sm-4 col-md-4 col-lg-4  "> <div> © <%= Time.current.year %> <span>Une solution innovante du groupe Finetech</span> </div> </div>
+    <div class="p-2 bd-highlight col-sm-6 col-md-6 col-lg-6  ">  </div>
+    <div class="d-flex col-sm-6 col-md-6 col-lg-6  row" >
+        <span class="p-2 bd-highlight col-lg-1"> <%= image_tag "wave.png", width: "auto", class: "img-fluid" %></span>
+        <span  class="p-2 bd-highlight col-lg-1"><%= image_tag "om.png", width: "auto", class: "img-fluid" %></span>
+        <span  class="p-2 bd-highlight col-lg-1"><%= image_tag "free.png", width: "auto", class: "img-fluid" %></span>
+        <span class="p-2 bd-highlight col-lg-1"><%= image_tag "visa.png", width: "auto", class: "img-fluid" %></span>
+      </div>
   </div>
-      
-  
 </div>
+
