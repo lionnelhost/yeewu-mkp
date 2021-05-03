@@ -706,3 +706,61 @@ $social-brand-tumblr: #32506d;
   width: 100px !important;
   border-radius: 10px;
 }
+
+
+
+
+//--------------------------------*
+  box-sizing: border-box
+
+  body
+    background: #e5f6ff
+    font-family: 'Roboto', sans-serif
+   
+  h1
+    color: #555
+    text-align: center
+    margin-bottom: 40px
+    
+  .wrapper
+    margin: 85px 0
+  
+  .container
+    max-width: 980px
+    margin: 0 auto
+    width: 100%
+  
+  .slider
+    width: 100%
+    overflow: hidden
+    position: relative
+    user-select: none
+    margin: 0 -10px
+    .items
+      display: flex
+      width: 100%
+      
+      .item
+        padding: 0 10px
+        width: 25%
+        flex-grow: 0
+        flex-shrink: 0
+        @media screen and (max-width: 700px)
+          width: 50%
+        @media screen and (max-width: 500px)
+          width: 100%
+        .child
+          border-top-left-radius: 5px
+          border-top-right-radius: 5px
+          background: #fafaff
+          border: 1px solid darken(#fafaff, 20%)
+          height: 200px
+          line-height: 200px
+          text-align: center
+          background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAOklEQVQoU43MSwoAMAgD0eT+h7ZYaOlHo7N+DNHL2HAGgBWcyGcKbqTghTL4oQiG6IUpOqFEC5bI4QD8PAoKd9j4XwAAAABJRU5ErkJggg==)
+        .footer
+          background: darken(#fafaff, 20%)
+          border-bottom-left-radius: 5px
+          border-bottom-right-radius: 5px
+          height: 50px
+  
