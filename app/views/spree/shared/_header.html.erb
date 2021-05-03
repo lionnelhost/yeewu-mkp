@@ -1,3 +1,5 @@
+
+
 <%# leaving #spree-header div for legacy support  %>
 <div class="position-absolute">
 <% cache spree_nav_cache_key('header') do %>
@@ -5,27 +7,9 @@
  
     <header id="header" class="d-flex align-items-center header-spree border-bottom ">
      
-      <div class="container-fluid  " style=" padding-right: 0px !important; padding-left: 0px !important;"> 
-      
-      <div class="d-none d-sm-none d-md-block">
-         <div class="d-flex justify-content-between col-md-12" style="padding-top:5px; padding-bottom:5px; padding-left:50px; padding-right:50px; width: 100%; background-color: #e6a801;">
-            <div class="d-flex justify-content-between mb-0 pb-0 col-md-6 col-sm-6">
-                  <div><span style="font-size:13px; font-weight:530;"><i class="fa fa-phone mr-2" style="color: #225828"></i>(+221) 33 000 00 00</span></div>
-                  <div><span style="font-size:13px; font-weight:530;"><i class="fa fa-map-marker mr-2" style="color: #225828"></i>Mermoz-Sacré-Cœur, Dakar</span></div>
-                  <div><span style="font-size:13px; font-weight:530;"><i class="fa fa-history mr-2" style="color: #225828"></i>Livraison 24/7</span></div>
-
-            </div>
-            <div class="mb-0 pb-0 ">
-                
-            </div>
-            <div class="d-flex flex-row-reverse mb-0 pb-0">
-                  <div><i class="fa fa-linkedin mr-3"></i></div>
-                  <div><i class="fa fa-twitter mr-3"></i></div>
-                  <div><i class="fa fa-facebook mr-3"></i></div>
-            </div>
-        </div>
-      </div>
-        <div class="d-flex flex-nowrap align-items-center" style=" padding-left:25px; padding-right:25px; ">
+      <div class="container-fluid" style=" padding-right: 0px !important; padding-left: 0px !important;"> 
+     <%= render "spree/shared/topbar" %>
+      <div class="d-flex flex-nowrap align-items-center" style=" padding-left:25px; padding-right:25px; ">
           <div class="d-xl-none flex-grow-1 header-spree-fluid-mobile-menu-toggler">
             <button class="navbar-toggler border-0 px-0 d-flex" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-label="<%= Spree.t('nav_bar.show_menu') %>">
               <%= icon(name: 'burger',
@@ -33,7 +17,9 @@
                       height: 16) %>
             </button>
           </div>
-          <%= image_tag "logo.png" , height: '70', width: '150' %>
+           <figure class="logo flex-grow-0  order-xl-0 header-spree-fluid-logo m-0 mr-4">
+            <%= logo %> </figure>
+
           <div id="main-nav-bar" class="flex-grow-0 d-none d-xl-block h-100 header-spree-fluid-primary-navigation">
             <%= render partial: 'spree/shared/main_nav_bar' %>
           </div>
@@ -43,8 +29,14 @@
           <%= render partial: 'spree/shared/mobile_navigation' %>
         </div>
       </div>
+
+      
+      
+
     </header>
+    
   </div>
 <% end %>
 
 </div>
+
